@@ -13,6 +13,13 @@
 服务器启动后便开始轮询，处理请求。直到按Ctrl+C 键停止服务器，轮询才会停止。
 
 
+### DB Migration:
+1.flask db init
+2.flask db migrate -m "short description"
+3.flask db upgrade
+(4.flask db downgrade)
+
+
 ### pip换源
     linux下，修改 ~/.pip/pip.conf (没有就创建一个)
     windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下：
