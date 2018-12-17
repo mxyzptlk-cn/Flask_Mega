@@ -10,6 +10,7 @@ from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from werkzeug.urls import url_parse
 
+
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -76,4 +77,15 @@ def register():
         db.session.commit()
         flash('Congratulations, you r now a registered user!')
         return redirect(url_for('login'))
-    return render_template('register.html',title = 'Register', form=form)
+    return render_template('register.html', title='Register', form=form)
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html', user=user, posts=posts)
