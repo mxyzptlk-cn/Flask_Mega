@@ -23,7 +23,6 @@ def before_request():
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'Lex'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -32,18 +31,6 @@ def index():
         {
             'author': {'username': 'Lex'},
             'body': 'The brown fox jumps over the lazy dog.'
-        },
-        {
-            'author': {'username': 'Andrew'},
-            'body': 'God created men and women.'
-        },
-        {
-            'author': {'username': 'Lucifer'},
-            'body': 'But everything else is made in China.'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool.'
         }
     ]
     return render_template('index.html', title='Home', posts=posts)
@@ -112,4 +99,4 @@ def edit_profile():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', title='Edit Porfile', form=form)
+    return render_template('edit_profile.html', title='Edit Profile', form=form)

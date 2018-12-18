@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
     <h1>Sign In</h1>
-    <form action="" method="post">
+    <form action="" method="post" novalidate>
         <!--The form.hidden_tag() template argument generates a-->
         <!--hidden field that includes a token that is used to-->
         <!--protect the form against CSRF attacks. All you need to-->
