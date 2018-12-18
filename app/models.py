@@ -16,6 +16,8 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    about_me = db.Column(db.String(140))
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     def set_password(self, passowrd):
         self.password_hash = generate_password_hash(passowrd)
@@ -32,6 +34,11 @@ class User(UserMixin, db.Model):
         return '<User {}>'.format(self.username)
 
 
+'''The user loader is registered with Flask-Login with the
+@login.user_loader decorator. The id that Flask-Login
+passes to the function as an argument is going to be a
+string, so databases that use numeric IDs need to
+convert the string to integer as you see above.'''
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
