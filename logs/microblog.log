@@ -1,13 +1,4 @@
-2018-12-18 12:09:46,807 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-18 15:04:07,533 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-18 15:04:17,195 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-18 15:40:07,341 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-18 15:41:01,388 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-18 15:41:34,506 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:48]
-2018-12-20 10:54:03,460 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:50]
-2018-12-20 10:57:11,188 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:50]
-2018-12-20 16:37:49,053 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:50]
-2018-12-20 16:40:22,704 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NSwiZXhwIjoxNTQ1Mjk1Njc4LjY4MDI0Mzd9.QKMz3wy5_w_sePCcQPx-frH9I5k5YqTAnpzh7RkBAA8 [POST] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
+2018-12-20 17:09:39,523 ERROR: Exception on /login [GET] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -21,7 +12,75 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 178, in reset_password
-    user.set_password(form.password.data)
-AttributeError: 'ResetPasswordRequestForm' object has no attribute 'password'
-2018-12-20 16:48:22,438 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:50]
+  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 69, in login
+    if form.validate_on_submit():
+NameError: name 'form' is not defined
+2018-12-20 17:09:39,664 ERROR: Exception on /login [GET] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 69, in login
+    if form.validate_on_submit():
+NameError: name 'form' is not defined
+2018-12-20 17:09:39,810 ERROR: Exception on /login [GET] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 69, in login
+    if form.validate_on_submit():
+NameError: name 'form' is not defined
+2018-12-20 17:09:39,978 ERROR: Exception on /login [GET] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 69, in login
+    if form.validate_on_submit():
+NameError: name 'form' is not defined
+2018-12-20 17:09:40,137 ERROR: Exception on /login [GET] [in c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\administrator\.virtualenvs\flask_mega-w9aju0jb\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\PycharmProjects\Flask_Mega\app\routes.py", line 69, in login
+    if form.validate_on_submit():
+NameError: name 'form' is not defined
+2018-12-20 17:12:02,194 INFO: Microblog startup [in C:\Users\Administrator\PycharmProjects\Flask_Mega\app\__init__.py:49]
