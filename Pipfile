@@ -8,13 +8,12 @@ verify_ssl = true
 [packages]
 flask = "*"
 flask-wtf = "*"
-flask-sqlalchemt = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-login = "*"
-falsk-mail = "*"
 flask-mail = "*"
 pyjwt = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"
